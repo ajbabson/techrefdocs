@@ -42,6 +42,8 @@
     - Default Cisco: `bgpq3 -S RIPE -l PFX_LIST_NAME AS3333`
     - IPv6 Aggregated, Routes up to /128 from as-set: `bgpq3 -l PFX_LIST_NAME -6 -A -R 128 AS-RIPENCC`
   - [bgpq4](https://github.com/bgp/bgpq4)
+    - `bgpq4 -S RIPE -Jl POL_JUNOS  AS3333`
+    - `bgpq4 -l POL_CISCO -6  -A -R 128 AS-RIPENCC`
   - [IRR Toolset](https://github.com/irrtoolset/irrtoolset)
   - [IRR Power Tools](https://github.com/6connect/irrpt)
   - peval
