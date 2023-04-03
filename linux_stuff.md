@@ -120,7 +120,7 @@ apt depends <package>
 `uname -a`
 
 #### Know your release
-`cat /etc/os-release`
+`cat /etc/os-release`<br>
 `lsb_release -a`
 
 #### Know what your kernel is up to
@@ -310,7 +310,7 @@ modinfo
 
 #### find files and do something with them
 ```
-find . -iname "*.vbs" -exec /bin/mv '{}' /var/dodgy/ \;<br>
+find . -iname "*.vbs" -exec /bin/mv '{}' /var/dodgy/ \;
 find . -name .DSstore -delete
 ```
 
