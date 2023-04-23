@@ -184,6 +184,12 @@ $ sudo systemctl is-enabled saned
 masked
 ```
 
+#### Reload systemd after a change, for example to disable ctrl-alt-delete
+```
+systemctl mask ctrl-alt-del.target
+systemctl daemon-reload
+```
+
 #### List installed packages
 Ubuntu
 ```
@@ -236,6 +242,15 @@ Shows all **failed** login attempts
 ```
 lastb
 ```
+Last time a user logged in
+```
+lastlog
+```
+For all sorts of login parameters, take a look in:
+```
+/etc/login.defs
+```
+
 #### Know your disk use<br>
 `du -s -h -x <dir>`<br>
 
