@@ -10,7 +10,6 @@ TMOUT=900
 readonly TMOUT
 export TMOUT
 ```
-This sets the TMOUT to a paltry 15 minutes for users and makes it read-only so users cannot change it.
 
 ## SSH Config
 In many environments, a bastion server must be first connected to.  If you need to do this, then you should add entries like these to your `~/.ssh/config` file.
