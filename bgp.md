@@ -25,6 +25,9 @@
 - [RFC6952](https://www.rfc-editor.org/rfc/rfc6952) - Analysis of BGP, LDP, PCEP, and MSDP Issues...
 - [RFC7454](https://www.rfc-editor.org/rfc/rfc7454) - BGP Operations and Security
 
+### BGP FlowSpec
+- [RFC 8955](https://www.rfc-editor.org/rfc/rfc8955) Dissemination of Flow Specification Rules (you probably don't need it)
+
 ### BGP Data
 - [RFC6396](https://www.rfc-editor.org/rfc/rfc6396) - Multi-Threaded Routing Toolkit (MRT) Routing Information Export Format
 
