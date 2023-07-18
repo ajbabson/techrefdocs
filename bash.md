@@ -100,8 +100,9 @@ echo ${!x}
 `bash -x <script>`
 
 
-# bash foo
+### bash fu
+```
 tar zcvf - /home | ssh pinky "cat > inky-homes.tgz"
 tar zcf - apache/ | ssh packman "cd /usr/local; mv apache apache.bak; tar zpxvf -"
 ssh pinky "cd /usr/local/packland; tar zpvxf -" < really-big-archive.tgz
-</pre>
+```
