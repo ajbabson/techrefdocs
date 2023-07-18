@@ -1,108 +1,107 @@
 
-# Bash tips
+### Bash tips
 
-<pre>
-# check your shell options
-shopt
+#### check your shell options
+`shopt`
 
-type <command>, -all, -path, -type
-hash
-echo $SECONDS
+\# elapsed seconds since your shell started
+`echo $SECONDS`
 
-# change to previous directory
-cd -
+\# change to previous directory
+`cd -`
 
-# signifies the end of command options; positional arguments follow
---
+\# signifies the end of command options; positional arguments follow
+`--`
 
-# redirect stdout and stderr to file
+\# redirect stdout and stderr to file
 command &> file
 
-# redirect stderr to the same place as stdout, and send to command2
+\# redirect stderr to the same place as stdout, and send to command2
 command 2>&1 | command2
 
-# do the same thing as above
+\# do the same thing as above
 command |& command2
 
-# append stderr along with stdout
+\# append stderr along with stdout
 command &>> file
 
-# open file for reading with descriptor 7
+\# open file for reading with descriptor 7
 exec 7< file.txt
-# or writing
+\# or writing
 exec 7> file.txt
 
-# open file for rw with descriptor 7
+\# open file for rw with descriptor 7
 exec <>7 file.txt
 
-# close file descriptor 7 for reading
+\# close file descriptor 7 for reading
 exec 7<&-
-# or writing
+\# or writing
 exec 7>&-
 
-# exit status of the shell
+\# exit status of the shell
 $?
 
-# PID of the shell
+\# PID of the shell
 $$
 
-# string comparison
+\# string comparison
 [ $x == $y ]
 
-# numeric comparison
+\# numeric comparison
 [ $x -eq $y ]
-# or 
+\# or 
 ((x==y))
 
-# reading from a here doc
-do
+\# reading from a here doc
+```
+    do
     read a b c d e <<END
     $(date)
 END
 echo $d
-
-# indirection with !
+```
+\# indirection with !
 x=abc
 abc=def
 echo ${!x} prints 'def'
 
-# return default value if var is unset (but don't assign default value)
+\# return default value if var is unset (but don't assign default value)
 x=${var:-defaultvalue}
 
-# same except also assign default value to var
+\# same except also assign default value to var
 x=${var:=defaultvalue}
 
-# display error and exit if var is unset
+\# display error and exit if var is unset
 x=${var:?}
 
-# return nothing if var is unset (otherwise return var)
+\# return nothing if var is unset (otherwise return var)
 x=${var:+}
 
-# return value start at position n
+\# return value start at position n
 x=${var:n}
 
-# take a slice from n, nn characters long
+\# take a slice from n, nn characters long
 x=${var:n:nn}
 
-# return length of var
+\# return length of var
 x=${#var}
 
-# remove from beginning of var
+\# remove from beginning of var
 ${var#pattern}
 
-# remove from end of var
+\# remove from end of var
 ${var%pattern}
 
-# check syntax
+\# check syntax
 bash -u <script>
 
-# run with debug
+\# run with debug
 bash -x <script>
 
-# toggle debugging inside script
+\# toggle debugging inside script
 set -x [+x]
 
-# report use of unset variables (add to top of script)
+\# report use of unset variables (add to top of script)
 set -u
 
 # bash foo
