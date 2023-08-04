@@ -74,6 +74,12 @@ You can also just unset it with `unset TMOUT`, but I favor a reasoned approach w
 same time not totally violating the intention original set by the sys admins.  Having huge numbers of users logged in for indefinite amounts of time is just as bad practiced as setting a TMOUT
 that's too short for users to be able to work reasonably without unnecessary interruptions.
 
+## Using TMUX
+
+If you use tmux, add this to your `~/.tmux.conf` file to ensure the global profile does not again apply TMOUT when you start tmux.
+
+`set-option -g default-command "bash --noprofile"`
+
 ## Back to SSH Keys
 
 If you are working in an environment where SSH keys change often as a normal part of the design (this is actually not good practice because it defeats the purpose, but it happens), then you might
