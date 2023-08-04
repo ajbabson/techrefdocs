@@ -24,8 +24,10 @@ git config --global alias.lg 'log --graph --oneline --decorate'
 git config --global alias.lga 'log --graph --oneline --decorate --all'
 git config --global alias.ci 'commit'
 git config --global alias.co 'checkout'
+git config --global alias.b 'branch'
+git config --global alias.ba 'branch -a'
 git config --global alias.st 'status -sb'
-git config --global --unset alias.foo
+git config --global --unset alias.unset_me
 git config --global alias.show-graph 'log --graph --abbrev-commit --pretty=oneline'
 ```
 
