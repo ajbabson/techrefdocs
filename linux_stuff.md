@@ -46,7 +46,7 @@ grep saveLines /etc/X11/app-defaults/XTerm
 
 #### Get to know your CPU
 ```
-cat /etc/cpuinfo
+cat /proc/cpuinfo
 lscpu
 ```
 
