@@ -23,3 +23,13 @@ If you want to see the type of key and its length:
 You can always regenerage the public key from any private key if needed:
 
 `ssh-keygen -y -f .ssh/private_key > .ssh/key.pub`
+
+### Rsync with SSH
+
+This trick can be useful for silent rsync in a cron job.  Storing the SSH options in a variable can
+be useful if you need to do some ad hoc rsync commands from the CLI, but also makes a shell script
+somewhat more readable.
+```
+SSH="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+rsync -az --delete -e "$SSH" server01.example.com:/var/data/ /var/data/
+```
