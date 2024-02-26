@@ -60,11 +60,20 @@ inxi -G
 inxi -F
 ```
 
-#### Find the serial number of a system and whether it's a VM or physical.
+#### Find the serial number of a system and whether it's a VM or physical
 ```
 dmidecode -t system | grep Serial
 dmidecode -s system-manufacturer
 ```
+
+#### Find basic hardware info without needing root privileges
+```
+cat /sys/class/dmi/id/sys_vendor
+DELL
+cat /sys/class/dmi/id/product_name
+S3048ON
+```
+
 #### What's on the bus, Gus?
 ```
 busctl
